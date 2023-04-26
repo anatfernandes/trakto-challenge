@@ -1,2 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("./reset.css");
 
+* {
+  --violet: #4743ff;
+  --white: #ffffff;
+  --red: #ff0000;
+  --cloudy: #7183a6;
+  --light-cloudy: #e4ebfb;
+  --dark-cloudy: #354564;
+  --light-green: #1dc763;
+  --light-pink: #f6b5ff;
+  --light-gray: #d0daef;
+  --dark-gray: #252323;
+  --light-blue: #eff2f9;
+  --blue: #0095ff;
+  --dark-blue: #04183e;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eff2f9;
+  font-family: "Roboto";
+  height: 100vh;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+b {
+  font-weight: 700;
+}
+
+input,
+button {
+  outline: none;
+}
+
+#app-login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-validation-error {
+  line-height: 18px;
+  margin-top: 5px;
+  padding-left: 5px;
+  border-left: 1px solid var(--red);
+  font-size: 14px;
+  color: var(--red);
+}

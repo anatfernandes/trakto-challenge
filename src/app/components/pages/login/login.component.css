@@ -1,0 +1,80 @@
+section {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 30px;
+  width: fit-content;
+}
+
+span {
+  margin: 40px 0 24px;
+  font-size: 20px;
+  color: var(--dark-blue);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: var(--dark-blue);
+}
+
+.form-group input {
+  height: 48px;
+  width: 100%;
+  padding: 0 16px;
+  border-radius: 4px;
+  background-color: var(--white);
+  border: 1px solid var(--light-cloudy);
+  caret-color: var(--blue);
+  color: var(--light-gray);
+  font-size: 14px;
+}
+
+.form-group input::placeholder {
+  color: var(--light-gray);
+}
+
+.form-group input:focus {
+  border-color: var(--blue);
+  color: var(--dark-blue);
+}
+
+.form-group:focus-within label {
+  color: var(--blue);
+}
+
+.form-group input:-webkit-autofill {
+  box-shadow: 0 0 0 30px var(--white) inset;
+  -webkit-box-shadow: 0 0 0 30px var(--white) inset;
+  -webkit-text-fill-color: var(--dark-blue);
+}
+
+form button {
+  height: 48px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: var(--light-green);
+  border: none;
+  color: var(--white);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+form button:hover {
+  filter: brightness(0.9);
+}
+
+form button:disabled {
+  filter: brightness(1);
+  cursor: default;
+}
