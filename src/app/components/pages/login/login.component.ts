@@ -1,5 +1,9 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+
+import { AuthorizationService } from "src/app/services/authorization/authorization.service";
+import { User } from "src/app/interfaces/User";
 
 @Component({
   selector: "app-login",
@@ -9,6 +13,11 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   isLoading: boolean = false;
+
+  constructor(
+    private authService: AuthorizationService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
@@ -25,11 +34,18 @@ export class LoginComponent implements OnInit {
     return this.loginForm.get("password");
   }
 
-  handleLogin(): void {
+  handleLogin() {
     if (this.loginForm.invalid) return;
 
     this.isLoading = true;
 
-    console.log(this.loginForm);
+    const user: User = {
+      email: this.loginForm.value.email,
+      password: this.loginForm.value.password,
+    };
+
+    this.authService.createLogin(user).subscribe(() => {
+      this.router.navigate(["/dashboard"]);
+    });
   }
 }
