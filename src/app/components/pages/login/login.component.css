@@ -62,6 +62,9 @@ span {
 form button {
   height: 48px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
   background-color: var(--light-green);
   border: none;

@@ -1,0 +1,7 @@
+#loading-component {
+  margin: 0.3rem;
+}
+
+.loading-default.mat-mdc-progress-spinner {
+  --mdc-circular-progress-active-indicator-color: var(--white) !important;
+}

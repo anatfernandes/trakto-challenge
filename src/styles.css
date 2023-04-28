@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import url("./reset.css");
 
 * {
@@ -18,9 +19,13 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  background: #eff2f9;
-  font-family: "Roboto";
+  background: var(--light-blue);
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
   height: 100vh;
 }
 

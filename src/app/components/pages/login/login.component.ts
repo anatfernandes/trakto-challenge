@@ -46,6 +46,8 @@ export class LoginComponent implements OnInit {
 
     this.authService.createLogin(user).subscribe(() => {
       this.router.navigate(["/dashboard"]);
+      this.isLoading = false;
+      this.loginForm.reset();
     });
   }
 }

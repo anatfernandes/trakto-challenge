@@ -42,6 +42,9 @@
 
     <button *ngIf="!isLoading">Entrar</button>
 
-    <button *ngIf="isLoading" disabled>Entrando...</button>
+    <button *ngIf="isLoading" disabled>
+      <app-loading size="small"></app-loading>
+      Entrando...
+    </button>
   </form>
 </section>
