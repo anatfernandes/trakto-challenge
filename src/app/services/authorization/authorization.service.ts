@@ -1,10 +1,9 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpErrorResponse } from "@angular/common/http";
-import { Observable, throwError } from "rxjs";
-import { catchError } from "rxjs/operators";
+import { Observable } from "rxjs";
 
-import { environment } from "src/environments/environment";
 import { User } from "src/app/interfaces/User";
+import { environment } from "src/environments/environment";
 
 @Injectable({
   providedIn: "root",
@@ -15,14 +14,7 @@ export class AuthorizationService {
 
   constructor(private http: HttpClient) {}
 
-  private handleError(error: HttpErrorResponse, callback: Function) {
-    callback();
-    return throwError(() => new Error(error.message));
-  }
-
-  public createLogin(body: User, callback: Function): Observable<any> {
-    return this.http
-      .post(this.API_URL, body)
-      .pipe(catchError((error) => this.handleError(error, callback)));
+  public createLogin(body: User): Observable<any> {
+    return this.http.post(this.API_URL, body);
   }
 }

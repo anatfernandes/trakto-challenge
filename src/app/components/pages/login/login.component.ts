@@ -46,20 +46,17 @@ export class LoginComponent implements OnInit {
       password: this.loginForm.value.password,
     };
 
-    this.authService
-      .createLogin(user, this.callbackLoginError.bind(this))
-      .subscribe(() => {
+    this.authService.createLogin(user).subscribe(
+      () => {
         this.router.navigate(["/dashboard"]);
         this.messagesService.create("Login realizado com sucesso!", "success");
         this.isLoading = false;
         this.loginForm.reset();
-      });
-  }
-
-  callbackLoginError(
-    errorMessage = "Não foi possível fazer login! Verifique os dados e tente novamente."
-  ) {
-    this.messagesService.create(errorMessage, "error");
-    this.isLoading = false;
+      },
+      (error) => {
+        this.messagesService.create(error.error.message, "error");
+        this.isLoading = false;
+      }
+    );
   }
 }
