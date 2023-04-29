@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 
 import { AuthorizationService } from "src/app/services/authorization/authorization.service";
+import { MessagesService } from "src/app/services/messages/messages.service";
 import { User } from "src/app/interfaces/User";
 
 @Component({
@@ -15,8 +16,9 @@ export class LoginComponent implements OnInit {
   isLoading: boolean = false;
 
   constructor(
+    private router: Router,
     private authService: AuthorizationService,
-    private router: Router
+    private messagesService: MessagesService
   ) {}
 
   ngOnInit(): void {
@@ -44,10 +46,20 @@ export class LoginComponent implements OnInit {
       password: this.loginForm.value.password,
     };
 
-    this.authService.createLogin(user).subscribe(() => {
-      this.router.navigate(["/dashboard"]);
-      this.isLoading = false;
-      this.loginForm.reset();
-    });
+    this.authService
+      .createLogin(user, this.callbackLoginError.bind(this))
+      .subscribe(() => {
+        this.router.navigate(["/dashboard"]);
+        this.messagesService.create("Login realizado com sucesso!", "success");
+        this.isLoading = false;
+        this.loginForm.reset();
+      });
+  }
+
+  callbackLoginError(
+    errorMessage = "Não foi possível fazer login! Verifique os dados e tente novamente."
+  ) {
+    this.messagesService.create(errorMessage, "error");
+    this.isLoading = false;
   }
 }

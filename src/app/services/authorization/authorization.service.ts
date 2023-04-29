@@ -15,13 +15,14 @@ export class AuthorizationService {
 
   constructor(private http: HttpClient) {}
 
-  private handleError(error: HttpErrorResponse) {
+  private handleError(error: HttpErrorResponse, callback: Function) {
+    callback();
     return throwError(() => new Error(error.message));
   }
 
-  public createLogin(body: User): Observable<any> {
+  public createLogin(body: User, callback: Function): Observable<any> {
     return this.http
       .post(this.API_URL, body)
-      .pipe(catchError(this.handleError));
+      .pipe(catchError((error) => this.handleError(error, callback)));
   }
 }

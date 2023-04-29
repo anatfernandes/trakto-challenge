@@ -10,9 +10,15 @@ import { AppComponent } from "./app.component";
 import { LoginComponent } from "./components/pages/login/login.component";
 import { LoadingComponent } from "./components/loading/loading.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MessagesComponent } from "./components/messages/messages.component";
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, LoadingComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    LoadingComponent,
+    MessagesComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
