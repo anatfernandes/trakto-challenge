@@ -4,7 +4,10 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 
 import { AuthorizationService } from "src/app/services/authorization/authorization.service";
 import { MessagesService } from "src/app/services/messages/messages.service";
+import { LocalStorageService } from "src/app/services/local-storage/local-storage.service";
 import { User } from "src/app/interfaces/User";
+import { UserEntity } from "src/app/interfaces/UserEntity";
+import { Storage } from "src/app/interfaces/Storage";
 
 @Component({
   selector: "app-login",
@@ -18,7 +21,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private authService: AuthorizationService,
-    private messagesService: MessagesService
+    private messagesService: MessagesService,
+    private localStorageService: LocalStorageService
   ) {}
 
   ngOnInit(): void {
@@ -47,7 +51,16 @@ export class LoginComponent implements OnInit {
     };
 
     this.authService.createLogin(user).subscribe(
-      () => {
+      (response: UserEntity) => {
+        const data: Storage = {
+          access_token: response.access_token,
+          refresh_token: response.refresh_token,
+          avatar: response.avatar.url,
+          firstname: response.firstname,
+          lastname: response.lastname,
+        };
+
+        this.localStorageService.set(data);
         this.router.navigate(["/dashboard"]);
         this.messagesService.create("Login realizado com sucesso!", "success");
         this.isLoading = false;
