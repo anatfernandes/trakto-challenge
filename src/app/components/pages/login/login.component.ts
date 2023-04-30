@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
         const data: Storage = {
           access_token: response.access_token,
           refresh_token: response.refresh_token,
-          avatar: response.avatar.url,
+          avatar: response.avatar?.url || "assets/user-default-avatar.png",
           firstname: response.firstname,
           lastname: response.lastname,
         };
