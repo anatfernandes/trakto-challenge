@@ -74,8 +74,14 @@ export class LocalStorageService {
 
   private decrypt(text: string): string | void {
     if (!text) return;
-    return CryptoJS.AES.decrypt(text, this.cryptoKey).toString(
-      CryptoJS.enc.Utf8
-    );
+
+    try {
+      const result = CryptoJS.AES.decrypt(text, this.cryptoKey).toString(
+        CryptoJS.enc.Utf8
+      );
+      return result;
+    } catch (err: any) {
+      return;
+    }
   }
 }
