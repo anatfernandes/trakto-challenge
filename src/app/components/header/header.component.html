@@ -1,0 +1,36 @@
+<header [class]="theme">
+  <img
+    class="logo"
+    alt="Trakto Edu"
+    src="assets/trakto-edu-logo-{{ theme }}.svg"
+  />
+
+  <div class="content">
+    <fa-icon id="icon" [icon]="calendarIcon" />
+    <span>{{ getDate() }}</span>
+
+    <div class="divisor"></div>
+
+    <fa-icon
+      id="icon"
+      class="notification"
+      title="notificações"
+      [icon]="bellIcon"
+    />
+
+    <div class="divisor"></div>
+
+    <img
+      class="user-avatar"
+      title="{{ username || 'user' }}"
+      [alt]="username"
+      [src]="avatarUrl"
+    />
+    <fa-icon
+      id="icon"
+      class="options"
+      title="{{ username || 'user' }}"
+      [icon]="arrowIcon"
+    />
+  </div>
+</header>

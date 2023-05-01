@@ -4,6 +4,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { AppRoutingModule } from "./app-routing.module";
 
 import { AppComponent } from "./app.component";
@@ -11,6 +12,7 @@ import { LoginComponent } from "./components/pages/login/login.component";
 import { LoadingComponent } from "./components/loading/loading.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MessagesComponent } from "./components/messages/messages.component";
+import { HeaderComponent } from "./components/header/header.component";
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { MessagesComponent } from "./components/messages/messages.component";
     LoginComponent,
     LoadingComponent,
     MessagesComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,7 @@ import { MessagesComponent } from "./components/messages/messages.component";
     HttpClientModule,
     MatProgressSpinnerModule,
     BrowserAnimationsModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
