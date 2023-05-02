@@ -1,9 +1,20 @@
 <header [class]="theme">
-  <img
-    class="logo"
-    alt="Trakto Edu"
-    src="assets/trakto-edu-logo-{{ theme }}.svg"
-  />
+  <div>
+    <img
+      class="logo"
+      alt="Trakto Edu"
+      src="assets/trakto-edu-logo-{{ theme }}.svg"
+    />
+
+    <button
+      class="change-environment"
+      *ngIf="hasChangeEnvironmentButton"
+      (click)="returnToDashboard()"
+    >
+      <fa-icon id="icon" [icon]="returnIcon" />
+      Trocar de ambiente
+    </button>
+  </div>
 
   <div class="content">
     <fa-icon id="icon" [icon]="calendarIcon" />

@@ -34,12 +34,43 @@ span {
   object-fit: cover;
 }
 
-.content {
-  width: fit-content;
-  height: 26px;
+button.change-environment {
+  width: auto;
+  height: 40px;
+  padding: 0 24px;
+  margin-left: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--cloudy);
+  background-color: var(--white);
+  font-size: 18px;
+  color: var(--cloudy);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+button.change-environment:hover {
+  filter: brightness(0.9);
+}
+
+header.dark button.change-environment {
+  background-color: var(--dark-gray);
+  border-color: var(--light-cloudy);
+  color: var(--light-cloudy);
+}
+
+header.dark button.change-environment:hover {
+  filter: brightness(1.1);
+}
+
+header > div {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.content {
+  width: fit-content;
+  height: 26px;
 }
 
 .divisor {

@@ -1,8 +1,12 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { Router } from "@angular/router";
 
-import { faCalendarDays, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
+import {
+  faCalendarDays,
+  faCaretDown,
+  faCaretLeft,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { LocalStorageService } from "src/app/services/local-storage/local-storage.service";
 
@@ -13,18 +17,24 @@ import { LocalStorageService } from "src/app/services/local-storage/local-storag
 })
 export class HeaderComponent {
   @Input() theme: "dark" | "light" = "light";
+  @Input() hasChangeEnvironmentButton = false;
   username = this.localStorageService.getFirstname();
   avatarUrl = this.localStorageService.getAvatar();
   calendarIcon = faCalendarDays;
   bellIcon = faBell;
   arrowIcon = faCaretDown;
+  returnIcon = faCaretLeft;
 
   constructor(
     private localStorageService: LocalStorageService,
     private router: Router
   ) {}
 
-  getDate() {
+  getDate(): string {
     return new Date().toLocaleDateString();
+  }
+
+  returnToDashboard(): void {
+    this.router.navigate(["/dashboard"]);
   }
 }
