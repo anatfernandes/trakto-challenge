@@ -13,6 +13,10 @@ const routes: Routes = [
     path: "dashboard",
     component: DashboardComponent,
   },
+  {
+    path: "dashboard/courseware",
+    component: DashboardComponent,
+  },
 ];
 
 @NgModule({

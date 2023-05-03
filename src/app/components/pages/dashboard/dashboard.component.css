@@ -1,0 +1,72 @@
+main {
+  padding: 70px 65px 0;
+  justify-content: initial;
+  overflow: scroll;
+  background-image: url("src/assets/dashboard-background.svg");
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+section > div {
+  width: 305px;
+  height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+}
+
+h4 {
+  line-height: 50px;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--white);
+  font-family: "Poppins", "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.divisor {
+  width: 28px;
+  height: 2px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+
+.courseware .divisor {
+  background-color: #4173cd;
+}
+
+.quizz .divisor {
+  background-color: var(--light-green);
+}
+
+.drawing .divisor {
+  background-color: var(--light-pink);
+}
+
+.youtube .divisor {
+  background-color: var(--red);
+}
+
+img {
+  width: 90%;
+  max-width: 300px;
+  height: auto;
+}
+
+section > div:hover img {
+  width: 92%;
+  max-width: auto;
+}
+
+@media (max-width: 780px) {
+  section {
+    justify-content: center;
+  }
+}
