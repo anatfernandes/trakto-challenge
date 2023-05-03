@@ -13,6 +13,7 @@ import { LoadingComponent } from "./components/loading/loading.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MessagesComponent } from "./components/messages/messages.component";
 import { HeaderComponent } from "./components/header/header.component";
+import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HeaderComponent } from "./components/header/header.component";
     LoadingComponent,
     MessagesComponent,
     HeaderComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
