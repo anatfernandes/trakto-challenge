@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MessagesComponent } from "./components/messages/messages.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
+import { CoursewareComponent } from './components/pages/courseware/courseware.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { DashboardComponent } from './components/pages/dashboard/dashboard.compo
     MessagesComponent,
     HeaderComponent,
     DashboardComponent,
+    CoursewareComponent,
   ],
   imports: [
     BrowserModule,
