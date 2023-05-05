@@ -17,20 +17,20 @@ export class CoursewareComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.designsService.listAll(this.nextDesignPage).subscribe(
-      (response) => {
+    this.designsService.listAll(this.nextDesignPage).subscribe({
+      next: (response: any) => {
         if (response.hasNextPage) {
           this.nextDesignPage = response.nextCursor;
         } else {
           this.nextDesignPage = "";
         }
       },
-      () => {
+      error: () => {
         this.messagesService.create(
           "Não possível buscar os designs! Por favor, recarregue a página.",
           "error"
         );
-      }
-    );
+      },
+    });
   }
 }

@@ -50,8 +50,8 @@ export class LoginComponent implements OnInit {
       password: this.loginForm.value.password,
     };
 
-    this.authService.createLogin(user).subscribe(
-      (response: UserEntity) => {
+    this.authService.createLogin(user).subscribe({
+      next: (response: UserEntity) => {
         const data: Storage = {
           access_token: response.access_token,
           refresh_token: response.refresh_token,
@@ -66,10 +66,10 @@ export class LoginComponent implements OnInit {
         this.isLoading = false;
         this.loginForm.reset();
       },
-      (error) => {
+      error: (error) => {
         this.messagesService.create(error.error.message, "error");
         this.isLoading = false;
-      }
-    );
+      },
+    });
   }
 }
