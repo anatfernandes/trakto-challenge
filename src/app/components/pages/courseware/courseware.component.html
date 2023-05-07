@@ -1,5 +1,36 @@
 <app-header
-	theme="light"
-	environmentPath="/dashboard"
-	[hasChangeEnvironmentButton]=true
+  theme="light"
+  environmentPath="/dashboard"
+  [hasChangeEnvironmentButton]="true"
 ></app-header>
+
+<main *ngIf="!isLoading">
+  <section id="section-background">
+    <div class="content">
+      <div class="header">
+        <div class="section-data">
+          <div class="control">
+            <span class="week">{{ getWeek() }}</span>
+            <fa-icon id="icon" [icon]="leftArrowIcon" />
+            <fa-icon id="icon" [icon]="rightArrowIcon" />
+          </div>
+
+          <span id="section-title">Material didático</span>
+
+          <p id="section-description">
+            Acesse suas últimas apresentações de aula.
+          </p>
+        </div>
+
+        <button
+          class="see-all"
+          (click)="navigateTo('/dashboard/courseware/all')"
+        >
+          Ver todo conteúdo
+        </button>
+      </div>
+
+      <div class="designs"></div>
+    </div>
+  </section>
+</main>

@@ -1,7 +1,6 @@
 main {
+  width: 100%;
   padding: 70px 65px 0;
-  justify-content: initial;
-  overflow: scroll;
   background-image: url("src/assets/dashboard-background.svg");
 }
 

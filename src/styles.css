@@ -31,12 +31,16 @@ body {
 }
 
 main {
-  width: 100%;
+  width: 90%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: initial;
+  margin: auto;
+  padding-top: 70px;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 b {
@@ -46,6 +50,31 @@ b {
 input,
 button {
   outline: none;
+}
+
+section#section-background {
+  width: 100%;
+  height: auto;
+  padding: 40px 0;
+  display: flex;
+  align-items: initial;
+  justify-content: initial;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: var(--white);
+}
+
+section#section-background #section-title {
+  font-size: 20px;
+  line-height: 50px;
+  font-weight: 700;
+  color: var(--dark-cloudy);
+}
+
+section#section-background #section-description {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--cloudy);
 }
 
 .form-validation-error {

@@ -1,0 +1,74 @@
+main {
+  width: 90%;
+  margin: auto;
+}
+
+#icon {
+  margin-left: 10px;
+  font-size: 22px;
+  color: var(--cloudy);
+  cursor: pointer;
+}
+
+#icon:hover {
+  filter: brightness(0.8);
+}
+
+div.content {
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
+  overflow: hidden;
+}
+
+div.header {
+  width: 100%;
+  height: fit-content;
+  padding-right: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.section-data {
+  display: flex;
+  flex-direction: column;
+}
+
+div.section-data span.week {
+  width: fit-content;
+  padding: 5px 9px;
+  border-radius: 50px;
+  background-color: var(--light-cloudy);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--cloudy);
+}
+
+div.section-data div.control {
+  display: flex;
+}
+
+button.see-all {
+  width: auto;
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 8px;
+  border: 1px solid var(--violet);
+  background-color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--violet);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+button.see-all:hover {
+  filter: brightness(0.9);
+}
+
+div.designs {
+  width: 100%;
+  height: fit-content;
+}
