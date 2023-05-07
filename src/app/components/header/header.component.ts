@@ -18,6 +18,7 @@ import { LocalStorageService } from "src/app/services/local-storage/local-storag
 export class HeaderComponent {
   @Input() theme: "dark" | "light" = "light";
   @Input() hasChangeEnvironmentButton = false;
+  @Input() environmentPath = "/dashboard";
   username = this.localStorageService.getFirstname();
   avatarUrl = this.localStorageService.getAvatar();
   calendarIcon = faCalendarDays;
@@ -34,7 +35,7 @@ export class HeaderComponent {
     return new Date().toLocaleDateString();
   }
 
-  returnToDashboard(): void {
-    this.router.navigate(["/dashboard"]);
+  changeEnvironment(): void {
+    this.router.navigate([this.environmentPath]);
   }
 }
