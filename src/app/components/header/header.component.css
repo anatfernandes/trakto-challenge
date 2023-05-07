@@ -82,8 +82,8 @@ header > div {
 }
 
 .user-avatar {
-  height: 100%;
-  width: auto;
+  height: 26px;
+  width: 26px;
   object-fit: cover;
   overflow: hidden;
   border-radius: 50px;
