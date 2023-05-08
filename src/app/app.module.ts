@@ -13,8 +13,9 @@ import { LoadingComponent } from "./components/loading/loading.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MessagesComponent } from "./components/messages/messages.component";
 import { HeaderComponent } from "./components/header/header.component";
-import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
-import { CoursewareComponent } from './components/pages/courseware/courseware.component';
+import { DashboardComponent } from "./components/pages/dashboard/dashboard.component";
+import { CoursewareComponent } from "./components/pages/courseware/courseware.component";
+import { DesignComponent } from "./components/design/design.component";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CoursewareComponent } from './components/pages/courseware/courseware.co
     HeaderComponent,
     DashboardComponent,
     CoursewareComponent,
+    DesignComponent,
   ],
   imports: [
     BrowserModule,

@@ -30,7 +30,12 @@
         </button>
       </div>
 
-      <div class="designs"></div>
+      <div class="designs">
+        <app-design
+          *ngFor="let design of designs"
+          [design]="design"
+        ></app-design>
+      </div>
     </div>
   </section>
 </main>

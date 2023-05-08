@@ -71,4 +71,5 @@ button.see-all:hover {
 div.designs {
   width: 100%;
   height: fit-content;
+  display: flex;
 }
