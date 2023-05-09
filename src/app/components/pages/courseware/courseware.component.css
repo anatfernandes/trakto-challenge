@@ -72,5 +72,10 @@ div.designs {
   width: 100%;
   height: fit-content;
   display: flex;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+span.without-designs {
+  font-size: 18px;
+  color: var(--dark-cloudy);
 }

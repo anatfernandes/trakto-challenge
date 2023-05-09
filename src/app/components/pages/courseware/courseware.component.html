@@ -4,7 +4,7 @@
   [hasChangeEnvironmentButton]="true"
 ></app-header>
 
-<main *ngIf="!isLoading">
+<main *ngIf="!isLoading && designs.length > 0">
   <section id="section-background">
     <div class="content">
       <div class="header">
@@ -36,6 +36,26 @@
           *ngFor="let design of designs"
           [design]="design"
         ></app-design>
+      </div>
+    </div>
+  </section>
+</main>
+
+<main *ngIf="!isLoading && designs.length === 0">
+  <section id="section-background">
+    <div class="content">
+      <div class="header">
+        <div class="section-data">
+          <span id="section-title">Material didático</span>
+
+          <p id="section-description">
+            Acesse suas últimas apresentações de aula.
+          </p>
+        </div>
+      </div>
+
+      <div id="designs-container" class="designs">
+        <span class="without-designs">Ainda não há nenhum registro criado!</span>
       </div>
     </div>
   </section>
