@@ -79,3 +79,9 @@ span.without-designs {
   font-size: 18px;
   color: var(--dark-cloudy);
 }
+
+img#banner {
+	width: 100%;
+	height: auto;
+	margin-bottom: 18px;
+}
