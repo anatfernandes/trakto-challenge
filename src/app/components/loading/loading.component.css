@@ -5,3 +5,7 @@
 .loading-default.mat-mdc-progress-spinner {
   --mdc-circular-progress-active-indicator-color: var(--white) !important;
 }
+
+.loading-cloudy.mat-mdc-progress-spinner {
+  --mdc-circular-progress-active-indicator-color: var(--cloudy) !important;
+}

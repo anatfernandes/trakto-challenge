@@ -1,4 +1,4 @@
 export interface Loading {
-  type: "default";
+  type: "default" | "cloudy";
   size: "small" | "normal";
 }
