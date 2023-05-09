@@ -18,7 +18,7 @@ export interface Design {
   app_reference: {
     id: string;
   };
-  cover: {
+  cover?: {
     raw: string;
     medium: string;
     high: string;
