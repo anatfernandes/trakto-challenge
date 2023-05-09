@@ -39,8 +39,15 @@ main {
   justify-content: initial;
   margin: auto;
   padding-top: 70px;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+main::-webkit-scrollbar {
+  display: none;
 }
 
 b {
