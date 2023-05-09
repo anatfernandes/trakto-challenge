@@ -3,10 +3,10 @@ import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
+import { Design } from "src/app/interfaces/Design";
+import { DesignEntity } from "src/app/interfaces/DesignEntity";
 import { DesignsService } from "src/app/services/designs/designs.service";
 import { MessagesService } from "src/app/services/messages/messages.service";
-import { DesignEntity } from "src/app/interfaces/DesignEntity";
-import { Design } from "src/app/interfaces/Design";
 
 @Component({
   selector: "app-courseware",
@@ -53,6 +53,7 @@ export class CoursewareComponent implements OnInit {
         }
 
         this.isLoading = false;
+        setTimeout(() => this.listenDesignsContainerControls(), 1000);
       },
       error: () => {
         this.messagesService.create(
@@ -80,5 +81,42 @@ export class CoursewareComponent implements OnInit {
     if (initial === end) return `Semana ${initial}`;
 
     return `Semana ${initial} até ${end}`;
+  }
+
+  private listenDesignsContainerControls() {
+    const designs = document.querySelectorAll("#design");
+    const leftArrow = document.querySelector("#icon.arrow-left");
+    const rightArrow = document.querySelector("#icon.arrow-right");
+    const maxDesings = designs.length;
+    let currentDesign = 0;
+
+    const controls = [leftArrow, rightArrow];
+
+    controls.forEach((control, index) => {
+      if (!control) return;
+
+      control.addEventListener("click", () => {
+        const isLeft = index === 0;
+
+        if (isLeft) {
+          currentDesign -= 1;
+        } else {
+          currentDesign += 1;
+        }
+
+        if (currentDesign >= maxDesings) {
+          currentDesign = 0;
+        }
+
+        if (currentDesign < 0) {
+          currentDesign = maxDesings - 1;
+        }
+
+        designs[currentDesign].scrollIntoView({
+          behavior: "smooth",
+          inline: "center",
+        });
+      });
+    });
   }
 }

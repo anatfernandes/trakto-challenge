@@ -11,8 +11,9 @@
         <div class="section-data">
           <div class="control">
             <span class="week">{{ getWeek() }}</span>
-            <fa-icon id="icon" [icon]="leftArrowIcon" />
-            <fa-icon id="icon" [icon]="rightArrowIcon" />
+
+            <fa-icon id="icon" class="arrow-left" [icon]="leftArrowIcon" />
+            <fa-icon id="icon" class="arrow-right" [icon]="rightArrowIcon" />
           </div>
 
           <span id="section-title">Material didático</span>
@@ -30,7 +31,7 @@
         </button>
       </div>
 
-      <div class="designs">
+      <div id="designs-container" class="designs">
         <app-design
           *ngFor="let design of designs"
           [design]="design"
