@@ -10,11 +10,17 @@
       <span id="section-title">Material didático</span>
       <p id="section-description">Acesse suas últimas apresentações de aula.</p>
 
-      <div id="designs-container">
+      <div id="designs-container" *ngIf="designs.length > 0">
         <app-design
           *ngFor="let design of designs"
           [design]="design"
         ></app-design>
+      </div>
+
+      <div id="designs-container" *ngIf="designs.length === 0">
+        <span id="section-without-content">
+        	Ainda não há nenhum registro criado!
+        </span>
       </div>
     </div>
   </section>

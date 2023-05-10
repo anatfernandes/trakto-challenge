@@ -84,6 +84,11 @@ section#section-background #section-description {
   color: var(--cloudy);
 }
 
+span#section-without-content {
+  font-size: 18px;
+  color: var(--dark-cloudy);
+}
+
 .form-validation-error {
   line-height: 18px;
   margin-top: 5px;
