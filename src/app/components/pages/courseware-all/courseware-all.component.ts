@@ -12,6 +12,7 @@ import { MessagesService } from "src/app/services/messages/messages.service";
 })
 export class CoursewareAllComponent implements OnInit {
   designs: Design[] = [];
+  isLoading = true;
 
   constructor(
     private designsService: DesignsService,
@@ -22,12 +23,14 @@ export class CoursewareAllComponent implements OnInit {
     this.designsService.listAll().subscribe({
       next: (response: DesignEntity) => {
         this.designs = response.data;
+        this.isLoading = false;
       },
       error: () => {
         this.messagesService.create(
           "Não foi possível carregar os designs! Por favor, tente novamente.",
           "error"
         );
+        this.isLoading = false;
       },
     });
   }

@@ -4,7 +4,7 @@
   [hasChangeEnvironmentButton]="true"
 ></app-header>
 
-<main>
+<main *ngIf="!isLoading">
   <section id="section-background">
     <div class="content">
       <span id="section-title">Material didático</span>
@@ -24,4 +24,8 @@
       </div>
     </div>
   </section>
+</main>
+
+<main *ngIf="isLoading">
+  <app-loading type="cloudy"></app-loading>
 </main>
