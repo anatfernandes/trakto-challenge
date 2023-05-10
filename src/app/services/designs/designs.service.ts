@@ -32,6 +32,19 @@ export class DesignsService {
     return this.http.get(this.API_URL, options);
   }
 
+  public listAll(): Observable<any> {
+    const params = new HttpParams()
+      .set("order_by", "updated_at")
+      .set("order_orientation", "desc")
+      .set("nextCursor", "");
+
+    const headers = this.getHeaders();
+
+    const options = { params, headers };
+
+    return this.http.get(this.API_URL, options);
+  }
+
   private getHeaders() {
     const token = this.localStorageService.getToken();
 
