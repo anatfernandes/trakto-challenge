@@ -1,0 +1,16 @@
+main {
+  padding-bottom: 20px;
+}
+
+div.content {
+  padding: 0 40px;
+}
+
+#designs-container {
+	width: 100%;
+	height: auto;
+  margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+  overflow: hidden;
+}

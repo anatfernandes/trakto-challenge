@@ -1,0 +1,21 @@
+<app-header
+  theme="light"
+  environmentPath="/dashboard/courseware"
+  [hasChangeEnvironmentButton]="true"
+></app-header>
+
+<main>
+  <section id="section-background">
+    <div class="content">
+      <span id="section-title">Material didático</span>
+      <p id="section-description">Acesse suas últimas apresentações de aula.</p>
+
+      <div id="designs-container">
+        <app-design
+          *ngFor="let design of designs"
+          [design]="design"
+        ></app-design>
+      </div>
+    </div>
+  </section>
+</main>
