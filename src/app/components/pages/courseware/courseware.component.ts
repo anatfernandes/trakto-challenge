@@ -28,7 +28,7 @@ export class CoursewareComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.designsService.listAll(this.nextDesignPage).subscribe({
+    this.designsService.listLastestUpdated(this.nextDesignPage).subscribe({
       next: (response: DesignEntity) => {
         this.designs = response.data.map((design) => {
           if (design.pages) return design;

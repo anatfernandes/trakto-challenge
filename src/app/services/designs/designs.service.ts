@@ -18,7 +18,7 @@ export class DesignsService {
     private localStorageService: LocalStorageService
   ) {}
 
-  public listAll(nextCursor: string): Observable<any> {
+  public listLastestUpdated(nextCursor: string): Observable<any> {
     const params = new HttpParams()
       .set("total_per_page", 10)
       .set("order_by", "updated_at")
