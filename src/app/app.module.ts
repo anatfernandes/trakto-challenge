@@ -18,6 +18,7 @@ import { CoursewareComponent } from "./components/pages/courseware/courseware.co
 import { DesignComponent } from "./components/design/design.component";
 import { CoursewareAllComponent } from "./components/pages/courseware-all/courseware-all.component";
 import { UnimplementedPageComponent } from "./components/unimplemented-page/unimplemented-page.component";
+import { QuizzComponent } from "./components/pages/quizz/quizz.component";
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { UnimplementedPageComponent } from "./components/unimplemented-page/unim
     DesignComponent,
     CoursewareAllComponent,
     UnimplementedPageComponent,
+    QuizzComponent,
   ],
   imports: [
     BrowserModule,
