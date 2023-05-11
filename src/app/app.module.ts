@@ -17,6 +17,7 @@ import { DashboardComponent } from "./components/pages/dashboard/dashboard.compo
 import { CoursewareComponent } from "./components/pages/courseware/courseware.component";
 import { DesignComponent } from "./components/design/design.component";
 import { CoursewareAllComponent } from "./components/pages/courseware-all/courseware-all.component";
+import { UnimplementedPageComponent } from "./components/unimplemented-page/unimplemented-page.component";
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CoursewareAllComponent } from "./components/pages/courseware-all/course
     CoursewareComponent,
     DesignComponent,
     CoursewareAllComponent,
+    UnimplementedPageComponent,
   ],
   imports: [
     BrowserModule,
