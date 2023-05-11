@@ -19,6 +19,7 @@ import { DesignComponent } from "./components/design/design.component";
 import { CoursewareAllComponent } from "./components/pages/courseware-all/courseware-all.component";
 import { UnimplementedPageComponent } from "./components/unimplemented-page/unimplemented-page.component";
 import { QuizzComponent } from "./components/pages/quizz/quizz.component";
+import { DrawingComponent } from "./components/pages/drawing/drawing.component";
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { QuizzComponent } from "./components/pages/quizz/quizz.component";
     CoursewareAllComponent,
     UnimplementedPageComponent,
     QuizzComponent,
+    DrawingComponent,
   ],
   imports: [
     BrowserModule,
