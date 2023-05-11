@@ -7,6 +7,7 @@ import { CoursewareComponent } from "./components/pages/courseware/courseware.co
 import { CoursewareAllComponent } from "./components/pages/courseware-all/courseware-all.component";
 import { QuizzComponent } from "./components/pages/quizz/quizz.component";
 import { DrawingComponent } from "./components/pages/drawing/drawing.component";
+import { YoutubeComponent } from "./components/pages/youtube/youtube.component";
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: "dashboard/drawing",
     component: DrawingComponent,
+  },
+  {
+    path: "dashboard/youtube",
+    component: YoutubeComponent,
   },
 ];
 
