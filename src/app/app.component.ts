@@ -14,8 +14,10 @@ export class AppComponent implements OnInit {
   constructor(private localStorageService: LocalStorageService, private router: Router) {}
 
   ngOnInit() {
-  	if (!this.localStorageService.getToken()) {
-  		this.router.navigate(["/login"]);
+  	if (this.localStorageService.getToken()) {
+  		this.router.navigate(["/dashboard"]);
+  		return;
   	}
+  	this.router.navigate(["/login"]);
   }
 }
