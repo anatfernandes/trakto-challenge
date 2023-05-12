@@ -1,27 +1,52 @@
-# TraktoChallenge
+# :framed_picture: Trakto Challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+Site criado com base no [desafio da Trakto](https://github.com/trakto/desafio_frontend), a fim de solucionar a história do usuário:
 
-## Development server
+> Como professor da Trakto Educação, eu preciso ter uma plataforma quer siga o protótipo no link https://www.figma.com/file/Ajzapgkl4vrXw8KnHlIwPh/PrototipoTraktoTV, onde eu forneço meu email e senha, e após a validação eu tenha acesso a uma tela com todos os módulos da Trakto Tv. Essa tela inicial deve ter um ícone para: Material didático; Quiz, Desenho e Youtube. Apenas o módulo "Material didático" é obrigatório, e o módulo "Desenho" é opcional e funciona como uma lousa.
+> <br />
+> O módulo de "Material didático" deve conter a lista dos meus 10 designs que foram editados recentemente e deve ter a opção de listar todos os materiais. Ao clicar na miniatura do design ou no nome do mesmo, deve-se abrir o modo de apresentação do nosso editor em uma nova aba. [citação retirada do texto original]
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Acesse seus designs [aqui!](https://trakto-challenge-analtfernandes.vercel.app)**
 
-## Code scaffolding
+<br />
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<div align=center>
 
-## Build
+ <img alt="Trakto Challenge Preview" src="https://github.com/analtfernandes/trakto-challenge/blob/main/src/assets/trakto-preview.gif" />
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+</div>
 
-## Running unit tests
+<br />
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## :hammer: Funcionalidades
+- Login
+- Mensagens de sucesso/erro
+- Listar últimos designs atualizados
+- Listar todos os designs
+- Redirecionamento ao clicar no design
 
-## Running end-to-end tests
+<br />
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## :hammer_and_wrench: Abrir e rodar o projeto
+1. Clone esse repositório:
+>```bash
+> git clone https://github.com/analtfernandes/trakto-challenge.git
+>```
 
-## Further help
+2. Na raiz do projeto, instale as dependências:
+>```bash
+> npm install
+>```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. Inicie o programa:
+>```bash
+> npm start
+>```
+
+4. Acesse http://localhost:4200/ no seu navegador e aproveite!
+
+<br />
+
+## Créditos
+- Todas as informações acerca do desafio podem ser encontradas no [repositório da Trakto](https://github.com/trakto/desafio_frontend)
+
