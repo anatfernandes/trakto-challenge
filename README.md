@@ -1,5 +1,7 @@
 # :framed_picture: Trakto Challenge
 
+![Badge Finalizado](https://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=success&style=for-the-badge)
+
 Site criado com base no [desafio da Trakto](https://github.com/trakto/desafio_frontend), a fim de solucionar a história do usuário:
 
 > Como professor da Trakto Educação, eu preciso ter uma plataforma quer siga o protótipo no link https://www.figma.com/file/Ajzapgkl4vrXw8KnHlIwPh/PrototipoTraktoTV, onde eu forneço meu email e senha, e após a validação eu tenha acesso a uma tela com todos os módulos da Trakto Tv. Essa tela inicial deve ter um ícone para: Material didático; Quiz, Desenho e Youtube. Apenas o módulo "Material didático" é obrigatório, e o módulo "Desenho" é opcional e funciona como uma lousa.
@@ -12,7 +14,7 @@ Site criado com base no [desafio da Trakto](https://github.com/trakto/desafio_fr
 
 <div align=center>
 
- <img alt="Trakto Challenge Preview" src="https://github.com/analtfernandes/trakto-challenge/blob/main/src/assets/trakto-preview.gif" />
+ <img alt="Trakto Challenge Preview" src="https://github.com/anatfernandes/trakto-challenge/blob/main/src/assets/trakto-preview.gif" />
 
 </div>
 
@@ -30,7 +32,7 @@ Site criado com base no [desafio da Trakto](https://github.com/trakto/desafio_fr
 ## :hammer_and_wrench: Abrir e rodar o projeto
 1. Clone esse repositório:
 >```bash
-> git clone https://github.com/analtfernandes/trakto-challenge.git
+> git clone https://github.com/anatfernandes/trakto-challenge.git
 >```
 
 2. Na raiz do projeto, instale as dependências:
